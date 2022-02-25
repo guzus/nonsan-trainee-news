@@ -17,5 +17,5 @@ C -->|실패| E[A는 뉴스를 볼 수 없음]
 인터넷 편지를 발송할 훈련생의 정보를 추가하고 PR을 올려주세요.
 | 이름  | 생일(yyyymmdd) | 입대일(yyyymmdd) | 부대명(ex: 육군훈련소) | groupName | unitName
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-| Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+| 정명구  | 20010301  | 20220310  | 육군훈련소  | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
