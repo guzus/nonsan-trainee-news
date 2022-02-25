@@ -13,7 +13,7 @@ class Spy:
         )
         # print(r.json())
         body = r.json().get("content")
-        content = base64.b64decode(body).decode('utf-8')
+        content = base64.b64decode(body).decode("utf-8")
         print(content)
 
         if r.status_code != 200:
@@ -24,17 +24,25 @@ class Spy:
         print(soldier_rows)
         for soldier_row in soldier_rows:
             try:
-                name, birth, enter_date, unit_name, *_ = soldier_row.replace(" ", "").split(
-                    "|"
-                )[1:-1]
+                (
+                    name,
+                    birth,
+                    enter_date,
+                    unit_name,
+                    soldier_code,
+                    *_,
+                ) = soldier_row.replace(" ", "").split("|")[1:]
                 soldier = thecampy.Soldier(
                     name,  # '이름',
                     birth,  # '생일(yyyymmdd)',
                     enter_date,  # '입대일(yyyymmdd)',
                     unit_name,  # '부대명(ex: 육군훈련소)'
                 )
+                soldier.add_soldier_code(soldier_code)  # 훈련병 번호
                 soldiers.append(soldier)
-            except:
+            except Exception as e:
+                print(e)
                 print("parse error")
 
+        print(f"인터넷 편지 대상 군인: {len(soldiers)}명")
         return soldiers
