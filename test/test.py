@@ -3,6 +3,7 @@ import sys
 
 sys.path.append("../src")
 from reporter import Reporter
+from spy import Spy
 
 
 class ReporterTest(unittest.TestCase):
@@ -14,6 +15,10 @@ class ReporterTest(unittest.TestCase):
         res = Reporter().fetch_yonhapnews_news()
         self.assertIsNotNone(res)
 
+class SpyTest(unittest.TestCase):
+    def test_get_soldiers_from_readme(self):
+        res = Spy().get_soldiers_from_readme()
+        self.assertIsNotNone(res)
 
 if __name__ == "__main__":
     unittest.main()

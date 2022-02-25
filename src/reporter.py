@@ -19,6 +19,9 @@ class Reporter:
         print(str(headlines))
         return str(headlines)
 
+    def fetch_finance_news(self):
+        return ""
+
     def publish_letters(self):
         hacker_news = {"title": "hacker news", "content": self.fetch_hacker_news()}
         return [hacker_news]

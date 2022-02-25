@@ -1,1 +1,3 @@
 thecampy
+python-dotenv
+requests
