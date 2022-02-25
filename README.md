@@ -1,4 +1,5 @@
 # nonsan-trainee-news
+![test workflow](https://github.com/guzus/nonsan-trainee-news/actions/workflows/test.yml/badge.svg)
 
 Using [this](https://github.com/lewisleedev/thecampy) library for sending daily news to trainees.
 
