@@ -1,15 +1,13 @@
 import requests
 import os
-from dotenv import load_dotenv
+from config import *
 import thecampy
-
-load_dotenv()
 
 
 class Spy:
     # change below to fetch information from README.md
     # since issue comment is editable only by comment creator
-    def get_soldiers_from_issue(repo_url="guzus/nonsan-trainee-news", issue_no=1):
+    def get_soldiers_from_readme(repo_url="guzus/nonsan-trainee-news"):
         r = requests.get(
             f"https://api.github.com/repos/{repo_url}/issues/{issue_no}",
             auth=(os.environ.get("GITHUB_ID"), os.environ.get("GITHUB_ACCESS_KEY")),

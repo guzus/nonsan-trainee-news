@@ -1,11 +1,11 @@
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 
-name: 더캠프 인터넷 편지 발송
+name: Unit Test
 
 on:
   schedule:
-    - cron: "0 12 * * 1"
+    - cron: "0 0 * * 1"
   workflow_dispatch:
 
 jobs:
@@ -23,9 +23,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install pytest
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-      - name: Send news
+      - name: Test
         env:
           EMAIL: ${{ secrets.THE_CAMP_EMAIL }}
           PASSWORD: ${{ secrets.THE_CAMP_PASSWORD }}
         run: |
-          python src/action.py
+          python test/test.py

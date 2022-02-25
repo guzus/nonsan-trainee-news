@@ -4,7 +4,6 @@ import thecampy
 class Postman:
     def __init__(self, email, password) -> None:
         self.client = thecampy.Client(email, password)
-        pass
 
     def send_letters(self, letters, soldiers):
         for soldier in soldiers:
