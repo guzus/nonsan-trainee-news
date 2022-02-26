@@ -1,7 +1,7 @@
 import unittest
 import sys
 
-sys.path.append("../src")
+sys.path.append("src")
 from config import EMAIL, PASSWORD
 from reporter import Reporter
 from spy import Spy
@@ -12,10 +12,12 @@ class ReporterTest(unittest.TestCase):
     def test_fetch_hacker_news(self):
         res = Reporter().fetch_hacker_news()
         self.assertIsNotNone(res)
+        self.assertLess(len(res), 1500)
 
     def test_fetch_yonhapnews_news(self):
         res = Reporter().fetch_yonhapnews_news()
         self.assertIsNotNone(res)
+        self.assertLess(len(res), 1500)
 
 
 class SpyTest(unittest.TestCase):
