@@ -20,3 +20,7 @@ C -->|실패| E[A는 뉴스를 볼 수 없음]
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 | 정명구  | 20010301  | 20220310  | 육군훈련소  | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+
+## 제공되는 뉴스 목록
+- [Hackernews Headline](https://news.ycombinator.com/newest)
+- [연합뉴스 Headline](https://www.yonhapnewstv.co.kr/news/headline)
