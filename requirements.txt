@@ -1,3 +1,4 @@
 thecampy
 python-dotenv
 requests
+bs4

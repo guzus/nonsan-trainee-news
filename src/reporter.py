@@ -20,7 +20,12 @@ class Reporter:
         return str(headlines)[:1499]
 
     def fetch_finance_news(self):
-        return ""
+        r = requests.get("https://www.cnbc.com/finance/")
+        soup = bs4.BeautifulSoup(r.text, "html.parser")
+        titlelinks = soup.findAll("a", {"class": "Card-title"})
+        headlines = list(map(lambda x: x.text, titlelinks))
+        print(str(headlines))
+        return str(headlines)[:1499]
 
     def publish_letters(self):
         hacker_news = {"title": "hacker news", "content": self.fetch_hacker_news()}
