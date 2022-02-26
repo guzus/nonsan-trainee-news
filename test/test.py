@@ -19,8 +19,8 @@ class ReporterTest(unittest.TestCase):
         self.assertIsNotNone(res)
         self.assertLess(len(res), 1500)
 
-    def test_fetch_finance_news(self):
-        res = Reporter().fetch_finance_news()
+    def test_fetch_cnbc_finance_news(self):
+        res = Reporter().fetch_cnbc_finance_news()
         self.assertIsNotNone(res)
         self.assertLess(len(res), 1500)
 
