@@ -37,6 +37,6 @@ class Reporter:
         yonhapnews_news = {"title": "연합뉴스", "content": self.fetch_yonhapnews_news()}
         cnbc_finance_news = {
             "title": "cnbc finance news",
-            "content": self.fetch_finance_news(),
+            "content": self.fetch_cnbc_finance_news(),
         }
         return [hacker_news, yonhapnews_news, cnbc_finance_news]

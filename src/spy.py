@@ -41,8 +41,7 @@ class Spy:
                 soldier.add_soldier_code(soldier_code)  # 훈련병 번호
                 soldiers.append(soldier)
             except Exception as e:
-                print(e)
-                print("parse error")
+                print("parse error:", e)
 
         print(f"인터넷 편지 대상 군인: {len(soldiers)}명")
         return soldiers
