@@ -27,5 +27,8 @@ jobs:
         env:
           EMAIL: ${{ secrets.THE_CAMP_EMAIL }}
           PASSWORD: ${{ secrets.THE_CAMP_PASSWORD }}
+          MY_GITHUB_ID: ${{ secrets.MY_GITHUB_ID }}
+          MY_GITHUB_ACCESS_KEY: ${{ secrets.MY_GITHUB_ACCESS_KEY }}
+          REPO_URL: "guzus/nonsan-trainee-news"
         run: |
           python src/action.py
