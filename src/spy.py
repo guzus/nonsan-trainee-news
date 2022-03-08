@@ -29,7 +29,6 @@ class Spy:
                     birth,
                     enter_date,
                     unit_name,
-                    soldier_code,
                     *_,
                 ) = soldier_row.replace(" ", "").split("|")[1:]
                 soldier = thecampy.Soldier(
@@ -38,7 +37,6 @@ class Spy:
                     enter_date,  # '입대일(yyyymmdd)',
                     unit_name,  # '부대명(ex: 육군훈련소)'
                 )
-                soldier.add_soldier_code(soldier_code)  # 훈련병 번호
                 soldiers.append(soldier)
             except Exception as e:
                 print("parse error:", e)
