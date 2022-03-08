@@ -19,7 +19,7 @@ C -->|실패| E[A는 뉴스를 볼 수 없음]
 | 이름  | 생일(yyyymmdd) | 입대일(yyyymmdd) | 부대명(ex: 육군훈련소) | 군번
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | 정명구  | 20010301  | 20220310  | 육군훈련소  | 채워주세요!  |
-| Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+| 조민준  | 19981125  | 20220310  | 육군훈련소  | 채워주세요!  |
 
 ## 제공되는 뉴스 목록
 - [Hackernews Headline](https://news.ycombinator.com/newest)
