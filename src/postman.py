@@ -8,6 +8,7 @@ class Postman:
     def send_letters(self, letters, soldiers):
         for soldier in soldiers:
             try:
+                self.client.add_soldier(soldier)
                 self.client.get_soldier(soldier)  # if needed
                 print("훈련병 추가 성공")
             except Exception as e:
